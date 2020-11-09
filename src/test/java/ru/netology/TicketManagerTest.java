@@ -6,6 +6,8 @@ import ru.netology.domain.TicketOffer;
 import ru.netology.manager.TicketOfferManager;
 import ru.netology.repository.TicketOfferRepository;
 
+import java.util.Comparator;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class TicketManagerTest {
@@ -29,7 +31,7 @@ TicketOffer fifth = new TicketOffer(5, 16000, "DME", "KZN", 90);
 }
 @Test
     void shouldFindAllSameFromTo() {
-    TicketOffer[] expected = new TicketOffer[] {second, fourth};
+    TicketOffer[] expected = new TicketOffer[] {fourth, second};
     TicketOffer[] actual = manager.getAll("VKO", "NUX");
     assertArrayEquals (expected, actual);
 }
@@ -45,4 +47,5 @@ TicketOffer fifth = new TicketOffer(5, 16000, "DME", "KZN", 90);
     TicketOffer[] actual = manager.getAll("SVO", "DME");
     assertArrayEquals (expected, actual);
 }
+
 }

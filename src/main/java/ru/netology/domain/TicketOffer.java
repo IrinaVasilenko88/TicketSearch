@@ -18,6 +18,6 @@ public class TicketOffer implements Comparable <TicketOffer> {
 
     @Override
     public int compareTo(TicketOffer o) {
-                return price - o.price;
+        return price - o.price;
     }
 }
